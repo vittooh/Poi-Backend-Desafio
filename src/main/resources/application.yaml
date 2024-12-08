@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://pois:pois@localhost:27017/pois-db?authSource=admin

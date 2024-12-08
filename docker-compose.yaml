@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "pois"
+      MONGO_INITDB_ROOT_PASSWORD: "pois"
+      MONGO_INITDB_DATABASE: "pois-db"
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
+    driver: local
